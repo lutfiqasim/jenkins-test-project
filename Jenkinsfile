@@ -4,9 +4,9 @@ pipeline {
             label 'docker-agent-python'
             }
       }
-    //   Triggers pipeline every 5 minutes if there is a change in the repository
+    //   Trigger pipeline every minute
       triggers {
-        pollSCM('H/5 * * * *')
+        pollSCM('* * * *')
       }
     //   Three stages pipeline
     stages {
