@@ -1,0 +1,42 @@
+// this is a template for a jenkinsfile that can be used to build a pipeline
+// using the declarative syntax. 
+// should replace each echo statement with the actual commands that need to be run
+// ex: label 'jenkins-agent-goes-here' should be replaced with my agent that uses docker image with python which is 'docker-agent-python'
+
+pipeline {
+    agent { 
+        node {
+            label 'jenkins-agent-goes-here'
+            }
+      }
+    //   Three stages pipeline
+    stages {
+        // Build stage
+        stage('Build') {
+            steps {
+                echo "Building.."
+                sh '''
+                echo "doing build stuff.."
+                '''
+            }
+        }
+        // Test stage
+        stage('Test') {
+            steps {
+                echo "Testing.."
+                sh '''
+                echo "doing test stuff.."
+                '''
+            }
+        }
+        // Deliver stage
+        stage('Deliver') {
+            steps {
+                echo 'Deliver....'
+                sh '''
+                echo "doing delivery stuff.."
+                '''
+            }
+        }
+    }
+}
