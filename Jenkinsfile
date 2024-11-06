@@ -12,7 +12,7 @@ pipeline {
     stages {
         // Build stage
         stage('Build') {
-            steps {
+           steps {
                 echo "Building.."
                 sh '''
                 cd myapp
