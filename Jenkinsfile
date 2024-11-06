@@ -6,8 +6,8 @@ pipeline {
       }
     //   Trigger pipeline every minute
       triggers {
-        pollSCM('* * * *')
-      }
+        pollSCM '* * * * *'
+    }
     //   Three stages pipeline
     stages {
         // Build stage
